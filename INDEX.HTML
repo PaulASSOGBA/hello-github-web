@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jean Paul Oscar ASSOGBA — CV & Portfolio</title>
+
+  <!-- Liaison avec le fichier CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#home">Oscar ASSOGBA</a>
+      <nav class="nav">
+        <a href="#home">Accueil</a>
+        <a href="#cv">CV</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="menuToggle" class="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- ACCUEIL -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Jean Paul Oscar ASSOGBA</h1>
+          <p class="subtitle">
+            Étudiant en <strong>BUT Métiers du Multimédia et de l'Internet</strong> à l’Université de Cergy, 
+            passionné par la création numérique, le web et le multimédia.
+          </p>
+          <div class="hero-contacts">
+            <a class="btn" href="#cv">Voir mon CV</a>
+            <a class="btn ghost" href="assets/cv/cv_final_ap_flunch.pdf" target="_blank" download>Télécharger le CV</a>
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <div class="photo-placeholder">Ta photo ici</div>
+          <ul class="contact-info">
+            <li><strong>Email :</strong> <a href="mailto:oscarassogba9@gmail.com">oscarassogba9@gmail.com</a></li>
+            <li><strong>Téléphone :</strong> 07 45 42 46 40</li>
+            <li><strong>Adresse :</strong> 11 Rue de Provence, 94800 Villejuif</li>
+            <li><strong>Disponibilité :</strong> Week-ends et vacances scolaires</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv" class="section cv-section">
+      <div class="container">
+        <h2>Mon CV</h2>
+        <div class="cv-grid">
+          <div class="cv-card">
+            <h3>Profil</h3>
+            <p>
+              Dynamique et curieux, je m'efforce d'apprendre et de m'adapter rapidement. 
+              Mes expériences m'ont permis de développer des compétences relationnelles solides 
+              et un sens du service client.
+            </p>
+
+            <h3>Compétences</h3>
+            <ul>
+              <li>Travail en équipe</li>
+              <li>Service client</li>
+              <li>Polyvalence</li>
+              <li>Sociabilité</li>
+            </ul>
+
+            <h3>Centres d'intérêt</h3>
+            <ul>
+              <li>Nouvelles technologies</li>
+              <li>Cinéma</li>
+              <li>Musique urbaine</li>
+            </ul>
+          </div>
+
+          <div class="cv-card">
+            <h3>Formation</h3>
+            <ul>
+              <li><strong>BUT Métiers du Multimédia et de l’Internet</strong> — 2024 à ce jour<br>Université de Cergy, Sarcelles</li>
+              <li><strong>Licence 1 Informatique de Gestion</strong> — 2023 à 2024<br>Université Catholique de l’Afrique de l’Ouest, Cotonou</li>
+              <li><strong>Baccalauréat Série S</strong> — 2023<br>Collège Catholique Père Planque, Cotonou</li>
+            </ul>
+
+            <h3>Expériences professionnelles</h3>
+
+            <h4>Équipier Polyvalent — FLUNCH, Lyon (juil.–sept. 2025)</h4>
+            <ul>
+              <li>Accueil et service des clients</li>
+              <li>Encaissement et gestion de la caisse</li>
+              <li>Mise en place des buffets</li>
+              <li>Respect des normes d’hygiène</li>
+            </ul>
+
+            <h4>Assistant social / Animateur — Fondation Action Recherche Handicap et Santé Mentale (juil.–sept. 2025)</h4>
+            <ul>
+              <li>Accompagnement des bénéficiaires</li>
+              <li>Animation d’ateliers et activités</li>
+              <li>Coordination avec familles et équipes spécialisées</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section portfolio-section">
+      <div class="container">
+        <h2>Portfolio</h2>
+        <p>Ajoute ici tes projets (images dans <code>/assets/portfolio/</code>).</p>
+
+        <div id="portfolioGrid" class="grid">
+          <article class="project-card">
+            <img src="assets/portfolio/placeholder1.jpg" alt="Projet 1" data-full="assets/portfolio/placeholder1.jpg" />
+            <div class="project-info">
+              <h3>Projet 1</h3>
+              <p>Description rapide du projet.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2>Contact</h2>
+        <form id="contactForm" action="contact.php" method="post" novalidate>
+          <label for="name">Nom complet</label>
+          <input id="name" name="name" type="text" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="1" required></textarea>
+
+          <input type="text" name="website" id="website" class="honeypot" autocomplete="off" />
+
+          <button class="btn" type="submit">Envoyer</button>
+          <p id="formStatus" class="form-status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Jean Paul Oscar ASSOGBA — 
+        <a href="mailto:oscarassogba9@gmail.com">oscarassogba9@gmail.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Liaison avec le JS -->
+  <script src="script.js"></script>
+</body>
+</html>
